@@ -42,7 +42,7 @@
 <div class="main">
 	<div class="sidebar">
 	  <a class="active" href="../admin.php"> Dashboard</a>
-	  <a href="admin-approval.php">Teacher Approval</a>
+	 
 	  <a href="admin-users.php">Students</a>
 	 
 	  <a href="admin-question.php">Questions</a>
