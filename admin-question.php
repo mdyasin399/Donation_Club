@@ -42,10 +42,8 @@
 <div class="main">
 	<div class="sidebar">
 	  <a class="active" href="../admin.php">Dashboard</a>
-	 
 	  <a href="admin-users.php">Students</a>
-	 
-	  <a href="admin-question.php">Questions</a>
+	  <a href="admin-question.php">Post</a>
 	  <a href="../logout.php">Logout</a>
 
 	</div>
@@ -58,10 +56,10 @@
 		    	<tr class="align-middle">
 		    		<td>#</td>
 		    		<td>ID</td>
-		    		<td>Question</td>
-		    		<td>Subject</td>
+		    		<td>Post</td>
+		    		<td>Club</td>
 		    		<td>Point</td>
-		    		<td>username</td>
+		    		<td>Username</td>
 		    		<td>Attachments</td>
 		    		<td>Status</td>
 		    		<td>Action</td>
