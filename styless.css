@@ -1,0 +1,49 @@
+/* Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/* Icons Styles */
+.bx {
+    font-size: 28px;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .payment-form {
+        padding: 20px;
+    }
+
+    #proceed-button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+/* Back Button Styles */
+.back-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
