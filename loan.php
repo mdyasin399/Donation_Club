@@ -11,12 +11,15 @@
     <div class="question-area">
       <div class="sm-title">
         
-        <div><h1>Loan</h1></div>
+        <div><h1>Click Apply Loan button for loan</h1></div>
       </div>
+
+      <!-- For Loan button-->
       <div class="big-title">
-        <h1>See All Post</h1>
-        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 30px !important;" >Ask For Loan</button>
+        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 30px !important;" >Apply Loan</button>
       </div>
+        <!-- For Loan button end-->
+
       <span class="hr-line"></span>
 
       <?php 
@@ -42,11 +45,13 @@
           </div>
           <div class="point-bar"><i class="fas fa-star"></i><span class=""><?php echo $q['ques_points']; ?> points</div>
         </div>
-        <div><a href="question.php?Question_ID=<?php echo $q['q_id']; ?>" class="ques_det"> <?php if(strlen($q['question_detail'])>150){ echo substr($q['question_detail'], 0, 150);} else { echo $q['question_detail'];}  ?> </a></div>
+        <div><a href="question.php?Question_ID=<?php echo $q['q_id']; ?>" class="ques_det"> <?php if(strlen($q['question_detail'])>150)
+        { echo substr($q['question_detail'], 0, 150);} else { echo $q['question_detail'];}  ?> </a></div>
           <div class="last-row"> 
             <div class="status"><?php echo $q['Status']; ?></div>         
             <div class="p-btn ">
-              <button type="button" <?php if($q['username']==$row['username'] || $q['Status']=="Answered"){?> disabled="disabled" style="display: none;" <?php } ?> name="answer" class="p-btn-des" style="border: 1px solid black;"><a href="secure-payment.php" style="text-decoration: none;color: black;">Pay</a></button></div>
+              <button type="button" <?php if($q['username']==$row['username'] || $q['Status']=="Donated"){?> disabled="disabled" style="display: none;" <?php } ?>
+               name="donate" class="p-btn-des" style="border: 1px solid black;"><a href="secure-payment.php" style="text-decoration: none;color: black;">Pay</a></button></div>
           </div>
 
         <span class="hr-line"></span>
@@ -54,6 +59,7 @@
       <?php
           }
     ?>
+
     </div>
     
 
@@ -64,6 +70,8 @@
    </div>
 
    <?php
-   include ('includes/modal.php');
+
    include ('includes/footer.php');
+   include ('includes/modal.php');
+ 
 ?>
