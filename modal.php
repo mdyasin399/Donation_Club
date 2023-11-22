@@ -11,10 +11,7 @@
             <label for="message-text" class="col-form-label">Donation Reason</label>
             <textarea class="form-control" id="message-text" name="details" style="height: 300px;"></textarea>
           </div>
-          <div class="mb-3">
-            <label for="formFile" class="form-label">Attach Necessary Image</label>
-            <input class="form-control" type="file" name="uploadfile">
-          </div>
+
           <div class="mb-3">
             <div class="row">
                 <div class="col-sm">
@@ -27,6 +24,8 @@
                   <label for="recipient-name" class="col-form-label">Expired Validation Time</label>
                   <select class="form-control" name="subject">
                     <option selected>Select Month</option>
+
+
                     <?php
                         try{
                             $dbcon = new PDO("mysql:host=localhost:3306;dbname=aski-lms;","root","");
@@ -35,10 +34,8 @@
                             $query="SELECT * FROM subjects";
                             
                             try{
-                                $sql=$dbcon->query($query);
-                                
+                                $sql=$dbcon->query($query);   
                                 $app_table=$sql->fetchAll();
-
                                 foreach($app_table as $row){ 
                                 ?>
                                   <option value="<?php echo $row['s_code'] ?>" ><?php echo $row['Subject_Name'] ?></option>
@@ -63,6 +60,7 @@
                             <?php
                         }
                     ?>
+
                   </select>
                 </div>
                 
