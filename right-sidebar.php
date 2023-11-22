@@ -43,5 +43,4 @@
           }
         ?>
 
-        <div class="p-btn"><a href="editprofile.php" class="p-btn-des">Load More</a></div>
       </div>
