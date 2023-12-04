@@ -1,5 +1,7 @@
 <html>
   <head>
+    <title>Admin Login</title>
+    <link rel="shortcut icon" href="./uploads/logo.png" type="img/x-icon" />
     <style>
 body {
   background-image: url('uploads/uiuback.png');
@@ -7,6 +9,8 @@ body {
   background-attachment: fixed;  
   background-size: cover;
 }
+
+
 </style>
     <link
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
@@ -33,7 +37,47 @@ body {
   </head>
 
   <body>
-   
+    <style>
+       
+        .back-btn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-btn:hover {
+            background-color: #2980b9;
+            transform: translateX(-5px);
+        }
+
+        .back-btn span {
+            margin-right: 5px;
+        }
+
+        .back-btn i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">
+        <i>&lt;</i>
+        <span>Back</span>
+    </button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
   <div  class="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
     <div
       class="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1"
@@ -45,6 +89,7 @@ body {
             class="w-32 mx-auto"
           />
         </div>
+        
         <div class="mt-12 flex flex-col items-center">
           <h1 class="text-2xl xl:text-3xl font-extrabold">
             Admin Panel
@@ -71,8 +116,24 @@ body {
                 class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                 type="password"
                 placeholder="Password" name="password"
-              />
-              
+                Password: <input type="password" value="" id="myInput">
+                <input type="checkbox" onclick="myFunction()"> Show Password
+                <input
+  class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+  type="text"
+  placeholder="Verification Code"
+  name="verification_code"
+/>
+<input type="hidden" id="secret_key" name="secret_key" value="your_secret_key_here" />
+        
+              <script> function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}</script>
               <button
                 class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none" type="submit" name="login_admin"
               >
@@ -81,6 +142,9 @@ body {
                   Sign In
                 </span>
               </button>
+              <!-- Add this inside the form -->
+
+
               <p class="mt-6 text-xs text-gray-600 text-center">
                 Dont have an account?
                 <a href="signup.php" class="border-b border-gray-500 border-dotted">
