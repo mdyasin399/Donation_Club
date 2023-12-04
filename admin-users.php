@@ -12,13 +12,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title> Admin </title>
-  
+  <title> Admin Dashboard </title>
+ 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/admin.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <link rel="shortcut icon" href="./uploads/logo.png" type="img/x-icon" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -46,7 +47,7 @@
 	  
 	  <a href="admin-users.php">Students</a>
 	
-	  <a href="admin-question.php">Questions</a>
+	  <a href="admin-question.php">Post</a>
 	  
 	  <a href="../logout.php">Logout</a>
 
